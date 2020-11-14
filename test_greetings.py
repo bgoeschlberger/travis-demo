@@ -1,5 +1,5 @@
 import pytest
-import GreetingGenerator from GreetingGenerator
+from GreetingGenerator import GreetingGenerator
 
 def test_get_greeting():
     gg = GreetingGenerator()

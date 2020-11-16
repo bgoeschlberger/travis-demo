@@ -6,8 +6,13 @@ python:
 # command to run tests
 script:
   - pytest
-deploy:
-  provider: heroku
-  api_key: $HEROKU_KEY
-  app:
-    main: bg-travis-demo
+  
+jobs:
+  include:
+    - stage: deploy
+      python: "3.6"
+      deploy:
+        provider: heroku
+        api_key: $HEROKU_KEY
+        app:
+          main: bg-travis-demo
